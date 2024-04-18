@@ -171,7 +171,11 @@ console.log(routes);
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior() {
+    // 解决滚动条自动滚动问题
+    return { x: 0, y: 0 };
+  }
 });
 
 router.beforeEach((to, from, next) => {
