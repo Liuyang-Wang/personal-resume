@@ -1,0 +1,145 @@
+@import './scrollbar/index.scss';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  // transition: all 0.3s ease;
+  background-clip: padding-box;
+  user-select: none;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, Apple Color Emoji,
+    Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji, BlinkMacSystemFont, Helvetica Neue, Arial, PingFang SC,
+    PingFang TC, PingFang HK, Microsoft Yahei, Microsoft JhengHei;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.clear-fix {
+  *zoom: 1;
+  &::after,
+  &::before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  // overflow: hidden;
+}
+
+td,
+th,
+caption {
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+i,
+b,
+strong {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+input,
+textarea,
+select,
+button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #aab2bd;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #aab2bd;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #aab2bd;
+}
+input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #aab2bd;
+}
+input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #aab2bd;
+}
+
+:root {
+  // $primary-color: #3498db;
+  // $font-size: 16px;
+  --font-size: 16px;
+  --primary-color: #fe7300;
+  --font-color: #40485b;
+}
+
+$num: 0, 12, 24;
+$model: (
+  p: padding,
+  pt: padding-top,
+  pb: padding-bottom,
+  pl: padding-left,
+  pr: padding-right,
+  m: margin,
+  mt: margin-top,
+  mb: margin-bottom,
+  ml: margin-left,
+  mr: margin-right
+);
+
+@each $itemNum in $num {
+  @each $i, $itemModel in $model {
+    .#{$i}#{$itemNum} {
+      #{$itemModel}: #{$itemNum}px;
+    }
+  }
+}

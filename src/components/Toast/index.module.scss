@@ -1,0 +1,49 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  z-index: 5000;
+  .toast {
+    @mixin transition {
+      transition: all 0.5s ease;
+    }
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    padding: 8px 16px;
+    border-radius: 6px;
+    line-height: 20px;
+    color: #fff;
+    position: relative;
+    top: 0;
+    @include transition;
+
+    &:global(.show) {
+      @mixin active {
+        &-active {
+          @include transition;
+        }
+      }
+      &-enter {
+        opacity: 0;
+        top: 50px;
+        @include active;
+        // &-to {
+        // }
+      }
+      &-leave {
+        @include active;
+        &-to {
+          top: -50px;
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

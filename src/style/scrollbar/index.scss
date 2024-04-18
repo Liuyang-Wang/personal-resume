@@ -1,0 +1,43 @@
+/*
+ * @link https://github.com/StylishThemes/Overlay-Scrollbars
+ */
+
+*:not(select) {
+  --custom-thumb-color: rgba(204, 204, 204, 0.9);
+  --custom-track-color: rgba(204, 204, 204, 0.1);
+  --custom-width: 8px;
+  scrollbar-color: var(--custom-thumb-color) var(--custom-track-color) !important;
+  scrollbar-width: var(--custom-width) !important;
+}
+/* Chrome and derivatives*/
+::-webkit-scrollbar {
+  --webkit-scrollbar-width-height: 6px;
+  max-width: var(--webkit-scrollbar-width-height) !important;
+  max-height: var(--webkit-scrollbar-width-height) !important;
+  background: var(--custom-track-color) !important;
+}
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+  background: var(--custom-track-color) !important;
+}
+::-webkit-scrollbar-thumb {
+  --webkit-scrollbar-border-radius: 3px;
+  background: var(--custom-thumb-color) !important;
+  border-radius: var(--webkit-scrollbar-border-radius) !important;
+}
+::-webkit-scrollbar-corner:hover,
+::-webkit-scrollbar-track:hover,
+::-webkit-scrollbar-track-piece:hover {
+  --custom-track-color-hover: rgba(204, 204, 204, 0.1);
+  background: var(--custom-track-color-hover) !important;
+}
+::-webkit-scrollbar-thumb:hover {
+  --custom-thumb-color-hover: rgba(79, 140, 201, 0.3);
+  background: var(--custom-thumb-color-hover) !important;
+}
+/*@-moz-document regexp("^https?://(www\.)?instagram.com/+.*") {
+  div[role="presentation"] {
+    overflow-x: hidden;
+  }
+}*/
