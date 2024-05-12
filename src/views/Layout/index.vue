@@ -1,5 +1,10 @@
 <template>
-  <transition name="page" :duration="1300" @before-enter="beforeTransitionEnter" @after-enter="afterTransitionEnter">
+  <transition
+    name="page"
+    :duration="1300"
+    @before-enter="beforeTransitionEnter"
+    @after-enter="afterTransitionEnter"
+  >
     <router-view />
   </transition>
 </template>

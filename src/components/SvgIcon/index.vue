@@ -1,5 +1,10 @@
 <template>
-  <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
+  <div
+    v-if="isExternal"
+    :style="styleExternalIcon"
+    class="svg-external-icon svg-icon"
+    v-on="$listeners"
+  />
   <svg v-else :class="svgClass" aria-hidden="true" v-on="$listeners">
     <use :xlink:href="`#icon-${iconName}`" />
   </svg>
@@ -43,7 +48,8 @@ export default {
 
 <style scoped>
 .svg-icon {
-  /* vertical-align: -0.15em; */
+  width: 100%;
+  height: 100%;
   fill: currentColor;
   overflow: hidden;
   transition: none;
