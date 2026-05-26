@@ -59,7 +59,7 @@ module.exports = {
     loaderOptions: {
       scss: {
         // 引用全局变量
-        prependData: `@import "~@/style/variables/index.scss";`
+        additionalData: `@import "@/style/variables/index.scss";`
       }
     }
   },

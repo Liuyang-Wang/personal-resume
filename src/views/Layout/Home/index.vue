@@ -408,15 +408,42 @@ export default {
             text: 'liuyang-wang.github.io'
           }
         ],
-        summary: '5年WEB前端开发经验，熟悉Vue，React，Angular前端框架，有Nuxt、Next开发经验，熟悉TypeScript，熟练使用git工具进行版本控制，熟练使用npm、pnpm、yarn包管理工具，熟悉W3C标准及规范，熟悉ES6标准与新特性掌握面向对象变成思想，能够快速的将效果图转化为HTML，熟练使用SCSS/LESS CSS预处理器。有NodeJs、Taro、uni-app、微信小程序等H5移动端开发经验，熟练使用ThreeJS、ECharts、Ant Design、Element、View Design、Vant、Taro UI组件库。',
+        summary: '9年WEB前端开发经验，熟悉Vue，React，Angular前端框架，有Nuxt、Next开发经验，熟悉TypeScript，熟练使用git工具进行版本控制，熟练使用npm、pnpm、yarn包管理工具，熟悉W3C标准及规范，熟悉ES6标准与新特性掌握面向对象变成思想，能够快速的将效果图转化为HTML，熟练使用SCSS/LESS CSS预处理器。有NodeJs、Taro、uni-app、微信小程序等H5移动端开发经验，熟练使用ThreeJS、ECharts、Ant Design、Element、View Design、Vant、Taro UI组件库。',
         selfEvaluation: '活泼开朗、乐观向上、勤奋好学，认真负者，抗压能力强，脚踏实地，善于沟通交流、开朗乐观，主动性强，有较强学习能力及项目管理能力'
       },
       workExperience: [
         {
           job: '前端开发',
           isInternship: false,
+          company: '石家庄人瑞人力资源服务有限公司',
+          time: '2025.8-至今',
+          content: [
+            {
+              title: '工作描述',
+              list: [
+                '本次工作经历是外包到美团负责美团 App 内团购推荐列表页的前端开发与维护，这是一套基于 Monorepo 多端同构架构的小程序工程，通过内部构建工具一套代码同时支持 MSC（美团小程序容器）、微信小程序、H5 多端发布。主要工作：',
+                '滚动性能优化：针对列表页复杂嵌套滚动场景（导航栏吸顶、搜索框形变、Tab 栏联动等），采用 WXS 渲染层动画方案替代传统 setData 驱动，将滚动联动的样式计算下沉到渲染层直接执行，避免 JS↔渲染层频繁通信；配合虚拟列表（首屏仅渲染 6 项）、will-change GPU 加速、setData 合并批处理等手段，显著提升了列表滑动流畅度。',
+                '页面架构设计：基于 Behavior 响应式架构将页面拆分为 9 个独立模块（控制层 / 数据模型 / 滚动控制 / 滚动动画 / Tab 切换 / 侧边栏运营位 / 下拉刷新 / 点后推推荐），每个模块职责独立、可单独维护；数据层采用 Store + Plugin 插件化模式，请求构造、数据转换、埋点上报均通过插件解耦。',
+                '业务功能落地：完成了点后推推荐（用户浏览详情返回后自动插入推荐卡片并去重）、AB 实验多版本并行（筛选样式 / 导航栏形态）、精细化地址选择（支持到商圈/POI/地铁站粒度）、侧边栏运营位频控展示、新人专属卡片与价格动画、负反馈弹窗等业务需求。',
+                '组件体系建设：维护 40+ 个业务卡片组件，支持服务端下发 templateName 动态渲染不同卡片模板，堆头区域支持双列 / 四列 / 双 SKU + 倒计时等多种布局。'
+              ]
+            },
+            {
+              title: '工作成果',
+              list: [
+                '列表页滚动性能优化：将团购推荐列表从单层滚动改造为 nested 嵌套滚动架构，导航栏吸顶、搜索框形变、Tab 联动等动画下沉到 WXS 渲染层执行，解决快速滑动卡顿问题。',
+                '点后推推荐 & AB 实验：独立完成点后推推荐全链路（浏览详情返回后自动插入推荐卡片 + 频控去重），承接 Tab 栏文字版新样式 AB 实验开发与多版本并行。',
+                '多业务模块维护：负责搜索默认词缓存、特价卡片/神券标签/新人模块等日常迭代，同时维护秒杀列表页架构适配和品牌货架弹窗商品图头部等功能开发。'
+              ]
+            }
+          ],
+          technologies: ['Store + Plugin 插件化数据流', 'TypeScript', 'Behavior 模块化架构', 'Git', '小程序性能优化']
+        },
+        {
+          job: '前端开发',
+          isInternship: false,
           company: '石家庄人瑞人力资源服务有限公司北京分公司',
-          time: '2024.5-至今',
+          time: '2024.5-2025.7',
           content: [
             {
               title: '工作描述',
@@ -527,9 +554,35 @@ export default {
       ],
       projectExperience: [
         {
+          name: 'APP频道页开发',
+          job: '前端开发',
+          time: '2025.8-至今',
+          content: [
+            {
+              title: '项目描述',
+              list: ['团购品类频道页（MRN） | 核心开发 基于 MRN（React Native 动态化）框架开发的团购 C 端频道页，覆盖 iOS / Android / 鸿蒙多端。']
+            },
+            {
+              title: '工作内容',
+              list: [
+                '多层吸顶 + 联动筛选：用 stickyHeaderIndices 实现 Tab + 筛选条的分层吸顶，配合 Animated.event 做 Tab 栏位移动画；筛选面板打开时自动将列表滚到吸顶位，关闭后恢复，解决了浮层与列表滚动的冲突问题',
+                'Class Component 时代的状态管理：在 Hooks 尚未普及的技术选型下，通过精心设计 shouldComponentUpdate 和 componentWillReceiveProps 生命周期，控制了 15+ 个组件的渲染范围，避免列表滚动时的全局重绘',
+                '曝光驱动的按需加载：Poi 卡片默认不加载图片，等 VisibilitySensor 回调可见后才 setState 触发图片渲染，首屏大量卡片场景下减少了网络请求和内存占用',
+                '接口容错与降级：每个接口调用都做了 catch 兜底返回空数据结构，确保某个接口失败不影响其他模块渲染；OWL 异常上报体系覆盖了所有请求错误和 JS 异常'
+              ]
+            },
+            {
+              title: '项目成果',
+              list: [
+                '该项目应用于公司内部，帮助用户高效管理和分析大数据，提升了企业的决策效率和业务管理水平。通过持续优化，系统运行稳定，用户反馈良好。'
+              ]
+            }
+          ]
+        },
+        {
           name: '大数据后端管理项目',
           job: '前端开发',
-          time: '2024.5-至今',
+          time: '2024.5-2025.7',
           content: [
             {
               title: '项目描述',
